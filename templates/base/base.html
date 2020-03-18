@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hermes HAU</title>
+</head>
+<body style="background: #304352; /* fallback for old browsers */">
+    <nav>
+        <div class="nav-wrapper light-green">
+          <a href="{{ url_for('index')}}" class="brand-logo">Hermes HAU</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="{{ url_for('altas')}}">Alta de Usuarios</a></li>
+            <li><a href="{{ url_for('index')}}">Baja de Usuarios</a></li>
+            <li><a href="{{ url_for('index')}}">Estatus de Usuarios</a></li>
+          </ul>
+        </div>
+      </nav>
+    {% block content %}
+    {% endblock %}    
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+    $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+</script>    
+
+</body>
+</html>
